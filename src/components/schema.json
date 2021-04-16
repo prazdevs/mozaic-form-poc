@@ -1,0 +1,18 @@
+{
+  "fields": [
+    {
+      "id": "name",
+      "tag": "text-input",
+      "label": "Nom",
+      "event": "input",
+      "defaultValue": ""
+    },
+    {
+      "id": "francois",
+      "tag": "checkbox-input",
+      "label": "LuL?",
+      "event": "change",
+      "defaultValue": true
+    }
+  ]
+}

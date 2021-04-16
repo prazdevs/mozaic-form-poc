@@ -1,17 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <generic-field
+      id="my-text-field"
+      error-id="my-text-field-error"
+      tag="text-field"
+      label="Name"
+      :value="lulValue"
+      :required="true"
+      @change="$event => (lulValue = $event)"
+    />
+    <generic-field
+      id="my-select-field"
+      error-id="my-select-field-error"
+      tag="select-field"
+      label="Favourite agent"
+      :value="agent"
+      :options="[
+        { text: 'Reyna', value: 'reyna' },
+        { text: 'Killjoy', value: 'killjoy' }
+      ]"
+      @change="$event => (agent = $event)"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GenericField from './components/fields/GenericField.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: { GenericField },
+  data () {
+    return {
+      lulValue: 'dfsdf',
+      agent: ''
+    }
+  },
+  methods: {
+    handleChange (event) {
+      console.log(event)
+    }
   }
 }
 </script>
@@ -21,7 +49,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
