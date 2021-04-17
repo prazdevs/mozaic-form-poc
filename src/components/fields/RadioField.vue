@@ -5,7 +5,12 @@
   >
     <legend class="mc-field__label">
       {{ label }}
-      <span class="mc-field__requirement">obligatoire</span>
+      <span
+        v-if="requirementText"
+        class="mc-field__requirement"
+      >
+        {{ requirementText }}
+      </span>
     </legend>
     <ul class="mc-field__container mc-field__container--inline">
       <li
@@ -33,13 +38,14 @@
 </template>
 
 <script>
+import mixin from './mixin'
+
 export default {
   components: {},
+  mixins: [mixin],
   props: {
     options: { type: Array, required: true },
-    id: { type: String, required: true },
-    value: { type: String, required: true },
-    label: { type: String, required: true }
+    value: { type: String, required: true }
   }
 }
 </script>

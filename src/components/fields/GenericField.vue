@@ -13,6 +13,7 @@
       :is="tag"
       :id="`${id}-field`"
       :value="value"
+      :type="type"
       :options="options"
       @change="$emit('change', $event)"
     />
@@ -37,6 +38,7 @@ export default {
     value: { type: [String, Boolean], required: true },
     id: { type: String, required: true },
     label: { type: String, default: '' },
+    type: { type: String, default: undefined },
     required: { type: Boolean, default: false },
     requirementText: { type: String, default: undefined },
     helpId: { type: String, default: undefined },
