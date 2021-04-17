@@ -21,19 +21,32 @@
       ]"
       @change="$event => (agent = $event)"
     />
+    <radio-field
+      id="my-radio-field"
+      label="Favourite agent"
+      :options="[
+        { text: 'Reyna', value: 'reyna' },
+        { text: 'Killjoy', value: 'killjoy' },
+        { text: 'Raze', value: 'raze' }
+      ]"
+      :value="radioAgent"
+      @change="$event => (radioAgent = $event)"
+    />
   </div>
 </template>
 
 <script>
 import GenericField from './components/fields/GenericField.vue'
+import RadioField from './components/fields/RadioField.vue'
 
 export default {
   name: 'App',
-  components: { GenericField },
+  components: { GenericField, RadioField },
   data () {
     return {
       lulValue: 'dfsdf',
-      agent: ''
+      agent: '',
+      radioAgent: ''
     }
   },
   methods: {

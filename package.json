@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@mozaic-ds/mozaic-vue": "^1.0.0-beta.15",
+    "@mozaic-ds/styles": "^1.7.1",
+    "@mozaic-ds/tokens": "^1.7.1",
     "@vue/composition-api": "^1.0.0-rc.6",
     "core-js": "^3.6.5",
     "lodash": "^4.17.21",
