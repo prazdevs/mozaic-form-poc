@@ -32,7 +32,7 @@ export default {
   components: { MField, MTextInputField },
   mixins: [mixin],
   props: {
-    value: { type: String, required: true },
+    value: { type: String, default: '' },
     type: { type: String, default: 'text', validator: v => types.includes(v) }
   }
 }

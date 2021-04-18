@@ -21,6 +21,13 @@ export default {
           helpText: 'You Valorant in-game name.'
         },
         {
+          id: 'date',
+          tag: 'text-field',
+          type: 'date',
+          label: 'Birth date',
+          helpText: 'The day you were born.'
+        },
+        {
           id: 'favAgent',
           tag: 'radio-field',
           label: 'Favourite agent',
