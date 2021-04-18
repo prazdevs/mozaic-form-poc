@@ -12,6 +12,9 @@
         {{ requirementText }}
       </span>
     </legend>
+    <span class="mc-field__help">
+      {{ helpText }}
+    </span>
     <ul class="mc-field__container mc-field__container--inline">
       <li
         v-for="(option, idx) in options"
@@ -24,6 +27,7 @@
           :checked="value === option.value"
           type="radio"
           class="mc-radio__input"
+          :class="{ 'is-invalid': isInvalid }"
           @change="$emit('change', $event.target.value)"
         >
         <label
@@ -34,6 +38,9 @@
         </label>
       </li>
     </ul>
+    <span class="mc-field__error-message">
+      {{ errorMessage }}
+    </span>
   </fieldset>
 </template>
 
@@ -66,6 +73,7 @@ $local-config: (
   ul {
     padding-left: 0;
     list-style: none;
+    margin-bottom: 0;
   }
 }
 </style>

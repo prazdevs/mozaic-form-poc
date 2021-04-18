@@ -1,0 +1,25 @@
+{
+  "fields": [
+    {
+      "id": "favAgent",
+      "tag": "radio-field",
+      "label": "Favourite agent",
+      "defaultValue": "",
+      "options": [
+        {
+          "text": "Killjoy",
+          "value": "killjoy"
+        },
+        {
+          "text": "Reyna",
+          "value": "reyna"
+        },
+        {
+          "text": "Raze",
+          "value": "raze"
+        }
+      ],
+      "helpText": "Pick your favourite Valorant agent."
+    }
+  ]
+}
